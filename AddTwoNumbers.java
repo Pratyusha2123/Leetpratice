@@ -1,22 +1,21 @@
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int val) {
-        this.val = val;
-    }
-}
-
 public class AddTwoNumbers {
 
-    public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    // Move the ListNode class INSIDE the main class
+    static class ListNode {
+        int val;
+        ListNode next;
 
+        ListNode(int val) {
+            this.val = val;
+        }
+    }
+
+    public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode dummy = new ListNode(0);
         ListNode current = dummy;
         int carry = 0;
 
         while (l1 != null || l2 != null || carry != 0) {
-
             int sum = carry;
 
             if (l1 != null) {
@@ -45,7 +44,6 @@ public class AddTwoNumbers {
     }
 
     public static void main(String[] args) {
-
         ListNode l1 = new ListNode(2);
         l1.next = new ListNode(4);
         l1.next.next = new ListNode(3);
