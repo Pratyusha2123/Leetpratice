@@ -2,15 +2,8 @@ class ListNode {
     int val;
     ListNode next;
 
-    ListNode() {}
-
     ListNode(int val) {
         this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
     }
 }
 
@@ -20,7 +13,6 @@ public class AddTwoNumbers {
 
         ListNode dummy = new ListNode(0);
         ListNode current = dummy;
-
         int carry = 0;
 
         while (l1 != null || l2 != null || carry != 0) {
@@ -45,30 +37,25 @@ public class AddTwoNumbers {
         return dummy.next;
     }
 
-    public static void printList(ListNode head) {
+    public static void print(ListNode head) {
         while (head != null) {
-            System.out.print(head.val);
-
-            if (head.next != null) {
-                System.out.print(" -> ");
-            }
-
+            System.out.print(head.val + " ");
             head = head.next;
         }
     }
 
     public static void main(String[] args) {
 
-        ListNode l1 = new ListNode(2,
-                new ListNode(4,
-                        new ListNode(3)));
+        ListNode l1 = new ListNode(2);
+        l1.next = new ListNode(4);
+        l1.next.next = new ListNode(3);
 
-        ListNode l2 = new ListNode(5,
-                new ListNode(6,
-                        new ListNode(4)));
+        ListNode l2 = new ListNode(5);
+        l2.next = new ListNode(6);
+        l2.next.next = new ListNode(4);
 
         ListNode result = addTwoNumbers(l1, l2);
 
-        printList(result);
+        print(result);
     }
 }
