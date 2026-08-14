@@ -24,15 +24,15 @@ public class PerfectNumberCheck {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
-        System.out.print("Number enter karein: ");
+        System.out.print("Enter a number: ");
         int num = sc.nextInt();
 
         int result = isPerfect(num);
 
         if (result == 1) {
-            System.out.println(num + " ek Perfect Number hai. (Output: 1)");
+            System.out.println(num + " one is a perfect number");
         } else {
-            System.out.println(num + " Perfect Number nahi hai. (Output: 0)");
+            System.out.println(num + " zero is not a perrfect number");
         }
 
         sc.close();
