@@ -15,7 +15,16 @@ public class ArrayMinMaxFinder {
         ArrayList<Integer> result = new ArrayList<>();
         result.add(min);
         result.add(max);
-        
         return result;
+    }
+    public static void main(String[] args) {
+
+        int[] arr = {10, 5, 20, 8, 15};
+
+        ArrayMinMaxFinder obj = new ArrayMinMaxFinder();
+
+        ArrayList<Integer> result = obj.getMinMax(arr);
+
+        System.out.println(result);
     }
 }
