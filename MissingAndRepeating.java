@@ -19,7 +19,6 @@ public class MissingAndRepeating {
                 break;
             }
         }
-
         ArrayList<Integer> result = new ArrayList<>();
         result.add(repeating);
         result.add(missing);
@@ -28,7 +27,6 @@ public class MissingAndRepeating {
     public static void main(String[] args) {
         MissingAndRepeating obj = new MissingAndRepeating();
         int[] arr = {4, 3, 6, 2, 1, 1};
-
         ArrayList<Integer> result = obj.findTwoElement(arr);
         System.out.println("Repeating: " + result.get(0));
         System.out.println("Missing: " + result.get(1));
