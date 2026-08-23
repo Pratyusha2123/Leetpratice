@@ -11,10 +11,8 @@ public class ArrayInsertion {
         for (int i = index; i < n; i++) {
             newArr[i + 1] = arr[i];
         }
-
         return newArr;
     }
-
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5};
         int index = 2;
@@ -22,7 +20,6 @@ public class ArrayInsertion {
 
         System.out.println("Original Array: " + Arrays.toString(arr));
         int[] result = insertAtIndex(arr, index, val);
-
         System.out.println("After Insertion: " + Arrays.toString(result));
     }
 }
