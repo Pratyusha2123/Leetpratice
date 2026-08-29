@@ -1,37 +1,26 @@
+import java.util.ArrayList;
+import java.util.HashSet;
 
-public class RemoveDuplicates {
+class RemoveDuplicates {
+    static ArrayList<Integer> removeDuplicate(int arr[]) {
+        ArrayList<Integer> result = new ArrayList<>();
+        HashSet<Integer> seen = new HashSet<>();
 
-    public static int removeDuplicates(int[] nums) {
-
-        if (nums.length == 0) {
-            return 0;
-        }
-
-        int i = 0;
-
-        for (int j = 1; j < nums.length; j++) {
-
-            if (nums[i] != nums[j]) {
-                i++;
-                nums[i] = nums[j];
+        for (int num : arr) {
+            if (!seen.contains(num)) {
+                seen.add(num);
+                result.add(num);
             }
         }
 
-        return i + 1;
+        return result;
     }
 
     public static void main(String[] args) {
-
-        int[] nums = {1, 1, 2};
-
-        int k = removeDuplicates(nums);
-
-        System.out.println("Number of Unique Elements: " + k);
-
-        System.out.print("Array after removing duplicates: ");
-
-        for (int i = 0; i < k; i++) {
-            System.out.print(nums[i] + " ");
-        }
+        int[] arr = {1, 2, 3, 1, 4, 2};
+        ArrayList<Integer> output = removeDuplicate(arr);
+        
+        System.out.println("Input:  [1, 2, 3, 1, 4, 2]");
+        System.out.println("Output: " + output);
     }
 }

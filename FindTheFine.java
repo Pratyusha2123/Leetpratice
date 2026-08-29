@@ -17,7 +17,6 @@ public class FindTheFine {
 
     public static void main(String[] args) {
         FindTheFine obj = new FindTheFine();
-
         int date = 12;
         int car[] = {2375, 7682, 2325, 2352};
         int fine[] = {250, 500, 350, 200};
