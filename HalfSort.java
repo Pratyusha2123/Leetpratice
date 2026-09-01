@@ -5,19 +5,15 @@ public class HalfSort {
     public static ArrayList<Integer> customSort(int[] arr) {
         int n = arr.length;
         int mid = n / 2;
-
-        // Sort both halves in ascending order
         Arrays.sort(arr, 0, mid);
         Arrays.sort(arr, mid, n);
 
         ArrayList<Integer> result = new ArrayList<>();
 
-        // Add first half (ascending)
         for (int i = 0; i < mid; i++) {
             result.add(arr[i]);
         }
 
-        // Add second half in reverse order (descending)
         for (int i = n - 1; i >= mid; i--) {
             result.add(arr[i]);
         }
@@ -29,6 +25,6 @@ public class HalfSort {
         int[] arr = {5, 4, 6, 2, 3, 8, 9, 7};
         ArrayList<Integer> sortedArr = customSort(arr);
         
-        System.out.println(sortedArr); // Output: [2, 4, 5, 6, 9, 8, 7, 3]
+        System.out.println(sortedArr); 
     }
 }
