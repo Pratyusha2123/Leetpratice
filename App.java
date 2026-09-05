@@ -28,7 +28,6 @@ public class App {
     }
 
     public static void main(String[] args) {
-        // Test Cases
         List<Integer> arr1 = Arrays.asList(2, 4, 1, 3, 5);
         System.out.println("Output 1: " + thirdLargest(arr1)); 
 
